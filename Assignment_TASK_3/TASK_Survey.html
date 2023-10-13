@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="TASK_Survey.css">
+</head>
+<body>
+    <div align="center" >
+        <h1 style="color: white;" >Customer servey Form</h1>
+        <div class="box">
+    <form id="surveyForm">
+        <label for="firstName">First Name:</label>
+        <input  type="text" id="firstName" required><br>
+
+        <label for="lastName">Last Name:</label>
+        <input  type="text" id="lastName" required><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input  type="date" id="dob" required><br>
+
+        <label for="country">Country:</label>
+        <select id="country" required>
+            <option value="" disabled selected>Select Country</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="UK">UK</option>
+            <!-- Add more options as needed -->
+        </select><br>
+
+        <label>Gender:</label>
+        <input type="checkbox" id="male"> <label for="male">Male</label>
+        <input type="checkbox" id="female"> <label for="female">Female</label>
+        <input type="checkbox" id="other"> <label for="other">Other</label><br>
+
+        <label for="profession">Profession:</label>
+        <input  type="text" id="profession" required><br>
+
+        <label for="email">Email:</label>
+        <input  type="email" id="email" required><br>
+
+        <label for="mobile">Mobile Number:</label>
+        <input  type="tel" id="mobile" required><br>
+
+        <button style="color: rgb(23, 163, 218);" type="button" onclick="submitForm()">Submit</button>
+        <button  style="color: rgb(23, 163, 218);" type="button" onclick="resetForm()">Reset</button>
+    </form>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Submitted Values</h2>
+            <div id="submittedValues"></div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <script src="TASK_Survey.js"></script>
+</body>
+</html>
